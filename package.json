@@ -1,0 +1,24 @@
+{
+  "name": "avocat",
+  "description": "A simple library to convert objection errors to boom errors",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "author": "Daniel COLE <daniel@leggett.fr>",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "lab -f -a code -t 100 -L",
+    "test-cov-html": "lab -f -L -a code -r html -o coverage.html"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "boom": "^7.2.0",
+    "db-errors": "^0.1.0",
+    "objection": "^1.0.1"
+  },
+  "devDependencies": {
+    "code": "^5.2.0",
+    "lab": "^15.4.1"
+  }
+}

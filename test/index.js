@@ -31,10 +31,4 @@ describe('Avocat', () => {
         it('should throw conflict', () => {});
         it('should throw internal', () => {});
     });
-
-    describe('background', () => {
-
-        it('should ignore the error in the background', () => {});
-        it('should rethrow the error in the background', () => {});
-    });
 });

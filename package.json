@@ -33,6 +33,7 @@
     "objection": "1.x.x"
   },
   "devDependencies": {
+    "coveralls": "3.x.x",
     "code": "5.x.x",
     "lab": "^15.x.x"
   }

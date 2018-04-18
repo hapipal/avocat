@@ -4,21 +4,36 @@
   "version": "0.0.1",
   "main": "lib/index.js",
   "author": "Daniel COLE <daniel@leggett.fr>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PixulHQ/avocat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PixulHQ/avocat/issues"
+  },
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "test": "lab -f -a code -t 100 -L",
-    "test-cov-html": "lab -f -L -a code -r html -o coverage.html"
+    "test-cov-html": "lab -f -L -a code -r html -o coverage.html",
+    "coveralls": "lab -r lcov | coveralls"
   },
-  "license": "ISC",
+  "keywords": [
+    "objection",
+    "errors",
+    "database",
+    "hapi",
+    "boom"
+  ],
+  "license": "MIT",
   "dependencies": {
-    "boom": "^7.2.0",
-    "db-errors": "^0.1.0",
-    "objection": "^1.0.1"
+    "boom": "7.x.x",
+    "db-errors": "0.1.x",
+    "objection": "1.x.x"
   },
   "devDependencies": {
-    "code": "^5.2.0",
-    "lab": "^15.4.1"
+    "code": "5.x.x",
+    "lab": "^15.x.x"
   }
 }

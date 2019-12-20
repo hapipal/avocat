@@ -3,13 +3,13 @@
   "description": "A simple library to convert objection errors to boom errors",
   "version": "1.1.0",
   "main": "lib/index.js",
-  "author": "Daniel COLE <daniel@leggett.fr>",
+  "author": "Daniel COLE <daniel@pixul.fr>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PixulHQ/avocat.git"
+    "url": "https://github.com/hapipal/avocat.git"
   },
   "bugs": {
-    "url": "https://github.com/PixulHQ/avocat/issues"
+    "url": "https://github.com/hapipal/avocat/issues"
   },
   "directories": {
     "lib": "lib"

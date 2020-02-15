@@ -17,7 +17,7 @@ describe('Avocat', () => {
 
         it('should return false if not an error', () => {
 
-            expect(Avocat.rethrow('notanerror', { return : true })).to.equal(false);
+            expect(Avocat.rethrow('notanerror', { return: true })).to.equal(false);
             expect(Avocat.rethrow('notanerror')).to.equal(false);
         });
 
@@ -28,7 +28,7 @@ describe('Avocat', () => {
                 Avocat.rethrow(new Error());
             }).to.not.throw();
 
-            expect(Avocat.rethrow(new Error(), { return : true })).to.equal(false);
+            expect(Avocat.rethrow(new Error(), { return: true })).to.equal(false);
         });
 
         it('should throw the error', () => {
@@ -43,10 +43,10 @@ describe('Avocat', () => {
 
             try {
                 Avocat.rethrow(new DBError({
-                    nativeError : {
-                        message : 'some native error message'
+                    nativeError: {
+                        message: 'some native error message'
                     }
-                }), { includeMessage : true });
+                }), { includeMessage: true });
             }
             catch (error) {
 
@@ -72,7 +72,7 @@ describe('Avocat', () => {
 
             it('should return notFound', () => {
 
-                const error = Avocat.rethrow(new NotFoundError(), { return : true });
+                const error = Avocat.rethrow(new NotFoundError(), { return: true });
 
                 expect(error.isBoom).to.equal(true);
                 expect(error.output.payload.error).to.equal('Not Found');
@@ -81,10 +81,10 @@ describe('Avocat', () => {
 
             it('should include message', () => {
 
-                expect(Avocat.rethrow(new NotFoundError(), { return : true, includeMessage : true }).message).to.equal('NotFoundError');
+                expect(Avocat.rethrow(new NotFoundError(), { return: true, includeMessage: true }).message).to.equal('NotFoundError');
 
                 try {
-                    Avocat.rethrow(new NotFoundError(), { return : true, includeMessage : true });
+                    Avocat.rethrow(new NotFoundError(), { return: true, includeMessage: true });
                 }
                 catch (error) {
                     expect(error.message).to.equal('NotFoundError');
@@ -99,9 +99,9 @@ describe('Avocat', () => {
 
                 try {
                     Avocat.rethrow(new ValidationError({
-                        message : 'validation error',
-                        type    : 'ModelValidation',
-                        data    : 'some random data'
+                        message: 'validation error',
+                        type: 'ModelValidation',
+                        data: 'some random data'
                     }));
                 }
                 catch (error) {
@@ -115,10 +115,10 @@ describe('Avocat', () => {
             it('should return badRequest', () => {
 
                 const error = Avocat.rethrow(new ValidationError({
-                    message : 'validation error',
-                    type    : 'ModelValidation',
-                    data    : 'some random data'
-                }), { return : true });
+                    message: 'validation error',
+                    type: 'ModelValidation',
+                    data: 'some random data'
+                }), { return: true });
 
                 expect(error.isBoom).to.equal(true);
                 expect(error.output.payload.error).to.equal('Bad Request');
@@ -129,17 +129,17 @@ describe('Avocat', () => {
             it('should include message', () => {
 
                 expect(Avocat.rethrow(new ValidationError({
-                    message : 'validation error',
-                    type    : 'ModelValidation',
-                    data    : 'some random data'
-                }), { return : true, includeMessage : true }).message).to.equal('validation error');
+                    message: 'validation error',
+                    type: 'ModelValidation',
+                    data: 'some random data'
+                }), { return: true, includeMessage: true }).message).to.equal('validation error');
 
                 try {
                     Avocat.rethrow(new ValidationError({
-                        message : 'validation error',
-                        type    : 'ModelValidation',
-                        data    : 'some random data'
-                    }), { return : true, includeMessage : true });
+                        message: 'validation error',
+                        type: 'ModelValidation',
+                        data: 'some random data'
+                    }), { return: true, includeMessage: true });
                 }
                 catch (error) {
                     expect(error.message).to.equal('validation error');
@@ -156,10 +156,10 @@ describe('Avocat', () => {
 
                     Avocat.rethrow(new NotNullViolationError(
                         {
-                            table       : 'table',
-                            constraint  : 'some_constraint',
-                            nativeError : 'NATIVE ERROR',
-                            client      : 'CLIENT'
+                            table: 'table',
+                            constraint: 'some_constraint',
+                            nativeError: 'NATIVE ERROR',
+                            client: 'CLIENT'
                         }
                     ));
                 }
@@ -175,12 +175,12 @@ describe('Avocat', () => {
 
                 const error = Avocat.rethrow(new NotNullViolationError(
                     {
-                        table       : 'table',
-                        constraint  : 'some_constraint',
-                        nativeError : 'NATIVE ERROR',
-                        client      : 'CLIENT'
+                        table: 'table',
+                        constraint: 'some_constraint',
+                        nativeError: 'NATIVE ERROR',
+                        client: 'CLIENT'
                     }
-                ), { return : true });
+                ), { return: true });
 
                 expect(error.isBoom).to.equal(true);
                 expect(error.output.payload.error).to.equal('Bad Request');
@@ -197,10 +197,10 @@ describe('Avocat', () => {
 
                     Avocat.rethrow(new ConstraintViolationError(
                         {
-                            table       : 'table',
-                            constraint  : 'some_constraint',
-                            nativeError : 'NATIVE ERROR',
-                            client      : 'CLIENT'
+                            table: 'table',
+                            constraint: 'some_constraint',
+                            nativeError: 'NATIVE ERROR',
+                            client: 'CLIENT'
                         }
                     ));
                 }
@@ -216,12 +216,12 @@ describe('Avocat', () => {
 
                 const error = Avocat.rethrow(new ConstraintViolationError(
                     {
-                        table       : 'table',
-                        constraint  : 'some_constraint',
-                        nativeError : 'NATIVE ERROR',
-                        client      : 'CLIENT'
+                        table: 'table',
+                        constraint: 'some_constraint',
+                        nativeError: 'NATIVE ERROR',
+                        client: 'CLIENT'
                     }
-                ), { return : true });
+                ), { return: true });
 
                 expect(error.isBoom).to.equal(true);
                 expect(error.output.payload.error).to.equal('Bad Request');
@@ -237,10 +237,10 @@ describe('Avocat', () => {
 
                     Avocat.rethrow(new ForeignKeyViolationError(
                         {
-                            table       : 'table',
-                            constraint  : 'some_constraint',
-                            nativeError : 'NATIVE ERROR',
-                            client      : 'CLIENT'
+                            table: 'table',
+                            constraint: 'some_constraint',
+                            nativeError: 'NATIVE ERROR',
+                            client: 'CLIENT'
                         }
                     ));
                 }
@@ -256,12 +256,12 @@ describe('Avocat', () => {
 
                 const error = Avocat.rethrow(new ForeignKeyViolationError(
                     {
-                        table       : 'table',
-                        constraint  : 'some_constraint',
-                        nativeError : 'NATIVE ERROR',
-                        client      : 'CLIENT'
+                        table: 'table',
+                        constraint: 'some_constraint',
+                        nativeError: 'NATIVE ERROR',
+                        client: 'CLIENT'
                     }
-                ), { return : true });
+                ), { return: true });
 
                 expect(error.isBoom).to.equal(true);
                 expect(error.output.payload.error).to.equal('Bad Request');
@@ -279,8 +279,8 @@ describe('Avocat', () => {
 
                     Avocat.rethrow(new DataError(
                         {
-                            nativeError : 'NATIVE ERROR',
-                            client      : 'CLIENT'
+                            nativeError: 'NATIVE ERROR',
+                            client: 'CLIENT'
                         }
                     ));
                 }
@@ -296,10 +296,10 @@ describe('Avocat', () => {
 
                 const error = Avocat.rethrow(new DataError(
                     {
-                        nativeError : 'NATIVE ERROR',
-                        client      : 'CLIENT'
+                        nativeError: 'NATIVE ERROR',
+                        client: 'CLIENT'
                     }
-                ), { return : true });
+                ), { return: true });
 
                 expect(error.isBoom).to.equal(true);
                 expect(error.output.payload.error).to.equal('Bad Request');
@@ -315,10 +315,10 @@ describe('Avocat', () => {
                 try {
                     Avocat.rethrow(new CheckViolationError(
                         {
-                            table       : 'table',
-                            constraint  : 'some_constraint',
-                            nativeError : 'NATIVE ERROR',
-                            client      : 'CLIENT'
+                            table: 'table',
+                            constraint: 'some_constraint',
+                            nativeError: 'NATIVE ERROR',
+                            client: 'CLIENT'
                         }
                     ));
                 }
@@ -334,12 +334,12 @@ describe('Avocat', () => {
 
                 const error = Avocat.rethrow(new CheckViolationError(
                     {
-                        table       : 'table',
-                        constraint  : 'some_constraint',
-                        nativeError : 'NATIVE ERROR',
-                        client      : 'CLIENT'
+                        table: 'table',
+                        constraint: 'some_constraint',
+                        nativeError: 'NATIVE ERROR',
+                        client: 'CLIENT'
                     }
-                ), { return : true });
+                ), { return: true });
 
                 expect(error.isBoom).to.equal(true);
                 expect(error.output.payload.error).to.equal('Bad Request');
@@ -354,11 +354,11 @@ describe('Avocat', () => {
 
                 try {
                     Avocat.rethrow(new UniqueViolationError({
-                        table       : 'table',
-                        columns     : 'test',
-                        constraint  : 'some_constraint',
-                        nativeError : 'NATIVE ERROR',
-                        client      : 'CLIENT'
+                        table: 'table',
+                        columns: 'test',
+                        constraint: 'some_constraint',
+                        nativeError: 'NATIVE ERROR',
+                        client: 'CLIENT'
                     }));
                 }
                 catch (error) {
@@ -372,12 +372,12 @@ describe('Avocat', () => {
             it('should return conflict', () => {
 
                 const error = Avocat.rethrow(new UniqueViolationError({
-                    table       : 'table',
-                    columns     : 'test',
-                    constraint  : 'some_constraint',
-                    nativeError : 'NATIVE ERROR',
-                    client      : 'CLIENT'
-                }), { return : true });
+                    table: 'table',
+                    columns: 'test',
+                    constraint: 'some_constraint',
+                    nativeError: 'NATIVE ERROR',
+                    client: 'CLIENT'
+                }), { return: true });
 
                 expect(error.isBoom).to.equal(true);
                 expect(error.output.statusCode).to.equal(409);
@@ -391,8 +391,8 @@ describe('Avocat', () => {
                 try {
                     Avocat.rethrow(new DBError(
                         {
-                            nativeError : 'NATIVE ERROR',
-                            client      : 'CLIENT'
+                            nativeError: 'NATIVE ERROR',
+                            client: 'CLIENT'
                         }
                     ));
                 }
@@ -409,10 +409,10 @@ describe('Avocat', () => {
 
                 const error = Avocat.rethrow(new DBError(
                     {
-                        nativeError : 'NATIVE ERROR',
-                        client      : 'CLIENT'
+                        nativeError: 'NATIVE ERROR',
+                        client: 'CLIENT'
                     }
-                ), { return : true });
+                ), { return: true });
 
                 expect(error.isBoom).to.equal(true);
                 expect(error.output.payload.error).to.equal('Internal Server Error');

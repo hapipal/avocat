@@ -2,7 +2,7 @@
 
 A library to convert Objection errors to Boom errors
 
-[![Build Status](https://travis-ci.org/PixulHQ/avocat.svg?branch=master)](https://travis-ci.org/PixulHQ/avocat) [![Coverage Status](https://coveralls.io/repos/github/PixulHQ/avocat/badge.svg?branch=master)](https://coveralls.io/github/PixulHQ/avocat?branch=master) 
+[![Build Status](https://travis-ci.org/hapipal/avocat.svg?branch=master)](https://travis-ci.org/hapipal/avocat) [![Coverage Status](https://coveralls.io/repos/github/hapipal/avocat/badge.svg?branch=master)](https://coveralls.io/github/hapipal/avocat?branch=master) 
 
 Lead Maintainer: [Daniel Cole](https://github.com/optii)
 

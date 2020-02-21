@@ -14,6 +14,9 @@
   "directories": {
     "lib": "lib"
   },
+  "engines": {
+    "node": ">=12.x.x"
+  },
   "scripts": {
     "test": "lab -f -a @hapi/code -t 100 -L",
     "test-cov-html": "lab -f -L -a @hapi/code -r html -o coverage.html",

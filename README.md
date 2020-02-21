@@ -20,5 +20,3 @@ Lead Maintainer: [Daniel Cole](https://github.com/optii)
 
 
 Heavily inspired by [Bounce](https://github.com/hapijs/bounce)
-
-

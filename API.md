@@ -2,7 +2,7 @@
 
 #### `rethrow(error, [options])`
 
- Throws a `Boom` error according to the `Objection` error received
+Throws a `Boom` error according to the `Objection` error received.
 
  - `error` - the `Objection` error (any other types of errors are just ignored).
  - `options` - optional object where:

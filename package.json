@@ -37,7 +37,7 @@
     "objection": "2.x.x",
     "coveralls": "3.x.x",
     "@hapi/code": "8.x.x",
-    "@hapi/lab": "22.x.x"
+    "@hapi/lab": "24.x.x"
   },
   "peerDependencies": {
     "objection": ">=2 <3"

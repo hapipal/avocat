@@ -1,6 +1,6 @@
 {
-  "name": "avocat",
-  "description": "A simple library to convert objection errors to boom errors",
+  "name": "@hapipal/avocat",
+  "description": "A utility to convert Objection database errors into Boom HTTP errors",
   "version": "2.0.0",
   "main": "lib/index.js",
   "author": "Daniel COLE <daniel@pixul.fr>",

@@ -16,7 +16,7 @@ npm install @hapipal/avocat
 >
 > Avocat is intended for use with hapi v19+, nodejs v12+, and Objection v2 (_see v1 for lower support_).
 
-Avocat provides a single utility function [`Avocat.throw(error, [options])`](API.md#avocatthrowerror-options) which transforms database errors from Objection into Boom HTTP errors that are compatible with hapi.
+Avocat provides a single utility function [`Avocat.rethrow(error, [options])`](API.md#avocatrethrowerror-options) which transforms database errors from Objection into Boom HTTP errors that are compatible with hapi.
 
 ```js
 'use strict';

@@ -7,7 +7,17 @@ const lab              = exports.lab = Lab.script();
 const { describe, it } = lab;
 const { expect }       = Code;
 
-const { ValidationError, NotFoundError, UniqueViolationError, DBError, CheckViolationError, DataError, ForeignKeyViolationError, ConstraintViolationError, NotNullViolationError } = require('objection');
+const {
+    NotFoundError,
+    ValidationError,
+    NotNullViolationError,
+    ConstraintViolationError,
+    ForeignKeyViolationError,
+    DataError,
+    CheckViolationError,
+    UniqueViolationError,
+    DBError
+} = require('objection');
 
 const Avocat = require('../lib');
 
@@ -17,6 +27,8 @@ describe('Avocat', () => {
 
         it('should return false if not an error', () => {
 
+            expect(Avocat.rethrow(null, { return: true })).to.equal(false);
+            expect(Avocat.rethrow(null)).to.equal(false);
             expect(Avocat.rethrow('notanerror', { return: true })).to.equal(false);
             expect(Avocat.rethrow('notanerror')).to.equal(false);
         });

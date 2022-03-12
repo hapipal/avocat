@@ -4,7 +4,7 @@ A utility to convert [Objection](https://vincit.github.io/objection.js/) databas
 
 > **Note**
 >
-> Avocat is intended for use with hapi v19+, nodejs v12+, and Objection v2 (_see v1 for lower support_).
+> Avocat is intended for use with hapi v19+, nodejs v12+, and Objection v2 or v3 (_see v1 for lower support_).
 
 ## `Avocat`
 ### `Avocat.rethrow(error, [options])`

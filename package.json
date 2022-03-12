@@ -1,7 +1,7 @@
 {
   "name": "@hapipal/avocat",
   "description": "A utility to convert Objection database errors into Boom HTTP errors",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "main": "lib/index.js",
   "author": "Daniel COLE <daniel@pixul.fr>",
   "repository": {

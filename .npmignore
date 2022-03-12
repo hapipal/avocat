@@ -1,4 +1,5 @@
 *
 !lib/**
+!types.d.ts
 !.npmignore
 !README.md

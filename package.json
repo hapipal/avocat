@@ -3,6 +3,7 @@
   "description": "A utility to convert Objection database errors into Boom HTTP errors",
   "version": "3.0.0",
   "main": "lib/index.js",
+  "types": "types.d.ts",
   "author": "Daniel COLE <daniel@pixul.fr>",
   "repository": {
     "type": "git",
@@ -37,7 +38,8 @@
     "objection": "2.x.x",
     "coveralls": "3.x.x",
     "@hapi/code": "8.x.x",
-    "@hapi/lab": "24.x.x"
+    "@hapi/lab": "24.x.x",
+    "@hapipal/types-avocat": ">=0"
   },
   "peerDependencies": {
     "objection": ">=2 <3"

@@ -15,7 +15,7 @@
     "lib": "lib"
   },
   "engines": {
-    "node": ">=12.x.x"
+    "node": ">=16"
   },
   "scripts": {
     "test": "lab -f -a @hapi/code -t 100 -L",
@@ -31,13 +31,13 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@hapi/boom": "9.x.x"
+    "@hapi/boom": "10.x.x"
   },
   "devDependencies": {
     "objection": "3.x.x",
     "coveralls": "3.x.x",
-    "@hapi/code": "8.x.x",
-    "@hapi/lab": "24.x.x"
+    "@hapi/code": "9.x.x",
+    "@hapi/lab": "25.x.x"
   },
   "peerDependencies": {
     "objection": ">=2 <4"
